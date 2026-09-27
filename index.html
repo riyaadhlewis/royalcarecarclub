@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Royal Car Care Club | Luxury Premium Car Wash</title>
+<meta name="description" content="Royal Car Care Club: luxury premium mobile car wash in Cape Town. We come to you in Bo-Kaap, Clifton, Sea Point, Camps Bay, Green Point, Kloof and the CBD. Wash &amp; Go from R99.99. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15030a; --bg2:#1e050d; --card:#26070f; --velvet:#8b0f1f;
+  --gold1:#fff0a8; --gold2:#e9b93f; --gold3:#a8720f; --ink:#f6efdd; --muted:#b3a98f;
+  --line:rgba(233,185,63,.28); --green:#25d366;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --brand:"Cinzel", "Trajan Pro", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#15030a; --bg2:#1e050d; --card:#26070f; --ink:#f6efdd; --muted:#b3a98f; --line:rgba(233,185,63,.28); }
+}
+:root[data-theme="dark"]{ --bg:#15030a; --bg2:#1e050d; --card:#26070f; --ink:#f6efdd; --muted:#b3a98f; --line:rgba(233,185,63,.28); }
+html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;overflow-x:hidden;padding-bottom:112px;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+   radial-gradient(60% 40% at 50% 0%, rgba(233,185,63,.2), transparent 70%),
+   radial-gradient(50% 35% at 100% 40%, rgba(200,18,46,.34), transparent 70%),
+   radial-gradient(50% 35% at 0% 75%, rgba(200,18,46,.28), transparent 70%),
+   var(--bg)}
+main,header,footer,.ticker{position:relative;z-index:1}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold1);outline-offset:3px}
+
+/* ticker */
+.ticker{overflow:hidden;background:linear-gradient(90deg,#6d450a,#e9b93f,#fff0a8,#e9b93f,#6d450a);color:#3a0510;font-weight:800;font-size:13px;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:0;animation:slide 38s linear infinite;padding:9px 0}
+.ticker span{padding:0 22px}
+.ticker i{font-style:normal;opacity:.6}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* hero */
+.hero{text-align:center;padding:34px 0 30px;background:linear-gradient(180deg,rgba(160,16,36,.6),rgba(100,8,22,.28) 55%,transparent)}
+.crown-wrap{position:relative;width:clamp(150px,44vw,230px);margin:0 auto -6px}
+.crown{width:100%;height:auto;display:block;filter:drop-shadow(0 8px 22px rgba(233,185,63,.45)) drop-shadow(0 2px 3px rgba(0,0,0,.7));animation:crownIn 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes crownIn{from{opacity:0;transform:translateY(-26px) scale(.92)}to{opacity:1;transform:none}}
+.spark{position:absolute;width:15px;height:15px;background:#fff6c6;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:tw 2.6s ease-in-out infinite;opacity:0}
+.spark.s1{left:8%;top:18%}.spark.s2{right:6%;top:8%;animation-delay:.9s;width:19px;height:19px}.spark.s3{left:46%;top:-4%;animation-delay:1.6s;width:12px;height:12px}.spark.s4{right:22%;top:62%;animation-delay:.4s;width:11px;height:11px}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+h1{margin:0;font-family:var(--brand);font-weight:800;line-height:1;text-transform:uppercase}
+h1 .r{display:block;font-size:clamp(40px,13vw,92px);letter-spacing:.06em}
+h1 .c{display:block;font-size:clamp(15px,4.6vw,30px);letter-spacing:.34em;margin-top:.5em;font-weight:600}
+.gold-text{background:linear-gradient(100deg,#8a5a0c 0%,#e9b93f 22%,#fff6c6 40%,#e9b93f 58%,#a8720f 80%,#f4cf5a 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shine 6s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;margin:20px auto 14px;max-width:340px;color:var(--gold2)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold2))}
+.rule::after{transform:scaleX(-1)}
+.tag{font-family:var(--serif);font-size:clamp(20px,5vw,28px);font-style:italic;color:var(--ink);margin:0 auto;max-width:560px;font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;padding:15px 26px;cursor:pointer;border:0;font-family:var(--sans);transition:transform .15s ease, filter .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:linear-gradient(180deg,#38e97e,#1fb655);color:#052512;box-shadow:0 10px 28px rgba(37,211,102,.35), inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-wa:hover{filter:brightness(1.06)}
+.btn-wa svg{width:22px;height:22px;flex:none}
+.btn-ghost{background:transparent;color:var(--gold1);border:1px solid var(--gold2)}
+.btn-ghost:hover{background:rgba(233,185,63,.1)}
+.btn-gold{background:linear-gradient(180deg,#fff0a8,#e9b93f 55%,#b47c14);color:#2a1a02;box-shadow:0 8px 22px rgba(233,185,63,.28), inset 0 1px 0 rgba(255,255,255,.6)}
+.btn-gold:hover{filter:brightness(1.05)}
+.btn-block{width:100%}
+.pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 10px 28px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.5)}70%,100%{box-shadow:0 10px 28px rgba(37,211,102,.35),0 0 0 18px rgba(37,211,102,0)}}
+
+.price .amt{white-space:nowrap}
+.price .cents{font-size:.5em;font-weight:700}
+.pkg .price{flex-wrap:wrap}.pkg .price .amt{font-size:42px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:rgba(21,3,10,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1120px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:16px}
+.nav .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--brand);font-weight:800;letter-spacing:.12em;font-size:13px;color:var(--gold1)}
+.nav .logo svg{width:38px;height:auto}
+.nav nav{display:none;margin-left:auto;gap:24px;font-size:14px;font-weight:600}
+.nav nav a{text-decoration:none;color:var(--ink);opacity:.85}.nav nav a:hover{opacity:1;color:var(--gold1)}
+.nav .btn{margin-left:auto;padding:9px 16px;font-size:14px}
+@media(min-width:820px){.nav nav{display:flex}.nav .btn{margin-left:8px}}
+.live{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;color:var(--gold1);font-weight:600}
+.live::before{content:"";width:9px;height:9px;border-radius:50%;background:#3fe37f;box-shadow:0 0 0 0 rgba(63,227,127,.6);animation:ping 2s infinite}
+@keyframes ping{70%,100%{box-shadow:0 0 0 10px rgba(63,227,127,0)}}
+.contact-grid{display:grid;gap:16px;max-width:860px;margin:0 auto}
+@media(min-width:760px){.contact-grid{grid-template-columns:1fr 1fr}}
+.c-card{padding:24px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,#5a0f20,#2a0610);text-align:center}
+.c-card h3{font-family:var(--serif);font-size:28px;margin:0 0 6px}
+.c-card .big{font-family:var(--serif);font-size:32px;font-weight:700;color:var(--gold1);margin:0}
+.c-card p{margin:4px 0 16px;color:var(--muted)}
+.linkbox{word-break:break-all;padding:12px 14px;border-radius:12px;border:1px dashed var(--gold2);color:var(--gold1);font-size:14px;font-weight:600;margin:6px 0 16px;user-select:all}
+.areas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:780px;margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;color:var(--gold1);border:1px solid var(--gold2);background:linear-gradient(180deg,#75122a,#32081a);transition:transform .15s,background .15s}
+.chip::before{content:"";width:9px;height:9px;border-radius:50%;background:linear-gradient(180deg,#fff0a8,#c8921e)}
+.chip:hover{background:#5a1222}.chip:active{transform:scale(.97)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:34px}
+.stat{background:linear-gradient(180deg,#5a0f20,#2a0610);padding:20px 12px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(30px,8vw,46px);line-height:1;font-weight:700}
+.stat span{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+
+section{padding:58px 0 8px}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(32px,7.6vw,52px);line-height:1.05;margin:0 0 10px;text-align:center}
+.sub{color:var(--muted);text-align:center;max-width:560px;margin:0 auto 30px}
+
+/* wash & go */
+.basic{position:relative;display:grid;gap:18px;padding:24px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(233,185,63,.12),rgba(255,255,255,.02) 55%);margin-bottom:22px}
+.basic h3{font-family:var(--serif);font-size:32px;margin:0;line-height:1}
+.badge{display:inline-block;font-size:12px;font-weight:700;color:#2a1a02;background:linear-gradient(180deg,#fff0a8,#e9b93f);padding:4px 11px;border-radius:999px;margin-bottom:10px}
+.basic ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px;color:var(--ink)}
+.basic .buy{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+@media(min-width:760px){.basic{grid-template-columns:1fr auto;align-items:center;padding:28px 34px}.basic .buy{align-items:flex-end}}
+.price{font-family:var(--serif);font-weight:700;line-height:1;display:flex;align-items:baseline;gap:6px}
+.price .amt{font-size:56px}.price small{font-size:15px;color:var(--muted);font-family:var(--sans)}
+.price .cur{font-size:26px;align-self:flex-start;margin-top:6px}
+
+/* packages */
+.pkgs{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:640px){.pkgs{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.pkgs{grid-template-columns:repeat(4,1fr)}}
+.pkg{position:relative;padding:26px 22px 24px;border-radius:24px;background:linear-gradient(180deg,#5a0f20,#2a0610);border:1px solid var(--line);display:flex;flex-direction:column}
+.pkg h3{font-family:var(--serif);font-size:30px;margin:0;line-height:1}
+.pkg .for{color:var(--muted);font-size:14px;margin:6px 0 16px;min-height:42px}
+.pkg ul{list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:10px;font-size:14.5px;flex:1}
+li.ck{display:flex;gap:10px;align-items:flex-start}
+li.ck::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:linear-gradient(180deg,#fff0a8,#c8921e);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='9'/%3E%3C/svg%3E");}
+li.ck::after{content:"";position:absolute;margin:7px 0 0 6px;width:6px;height:3px;border-left:2px solid #2a1a02;border-bottom:2px solid #2a1a02;transform:rotate(-45deg)}
+li.ck{position:relative}
+.pkg.hot{border:1.5px solid var(--gold2);background:linear-gradient(180deg,#75122a,#32081a);box-shadow:0 0 0 1px rgba(255,240,168,.15),0 22px 60px rgba(233,185,63,.18)}
+.ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:12px;font-weight:800;color:#2a1a02;background:linear-gradient(180deg,#fff0a8,#e9b93f);padding:5px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.save{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#8ff0b3}
+.perk-bar{margin-top:22px;text-align:center;padding:16px 18px;border-radius:16px;border:1px dashed var(--line);color:var(--gold1);font-family:var(--serif);font-size:22px}
+
+/* quiz */
+.panel{max-width:720px;margin:0 auto;padding:26px 20px;border-radius:26px;border:1px solid var(--line);background:linear-gradient(180deg,#5a0f20,#2a0610)}
+.dots{display:flex;gap:8px;justify-content:center;margin-bottom:20px}
+.dots i{width:34px;height:4px;border-radius:4px;background:rgba(255,255,255,.14)}
+.dots i.on{background:linear-gradient(90deg,#e9b93f,#fff0a8)}
+.q{font-family:var(--serif);font-size:clamp(26px,6.5vw,36px);line-height:1.1;text-align:center;margin:0 0 20px}
+.opts{display:grid;gap:10px}
+.opt{width:100%;text-align:left;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink);font:600 16px var(--sans);cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.opt:hover{background:rgba(233,185,63,.12);border-color:var(--gold2)}
+.opt:active{transform:scale(.99)}
+.result{text-align:center}
+.result svg{width:96px;height:auto;margin:0 auto 8px;display:block;filter:drop-shadow(0 6px 16px rgba(233,185,63,.4))}
+.result h3{font-family:var(--serif);font-size:clamp(34px,8vw,48px);margin:0 0 8px;line-height:1}
+.result p{color:var(--muted);max-width:480px;margin:0 auto 16px}
+.reco{display:inline-block;padding:10px 16px;border-radius:14px;border:1px solid var(--gold2);color:var(--gold1);font-weight:700;margin-bottom:18px}
+.result .cta-row{margin-top:6px}
+
+/* loyalty */
+.card{position:relative;max-width:640px;margin:0 auto;padding:26px 20px 22px;border-radius:26px;overflow:hidden;
+  background:linear-gradient(135deg,#8b1228 0%,#2a0710 50%,#4d320a 100%);border:1.5px solid var(--gold2);box-shadow:0 26px 70px rgba(233,185,63,.16)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,240,168,.14) 48%,transparent 62%);transform:translateX(-100%);animation:sweep 5.5s ease-in-out infinite}
+@keyframes sweep{60%,100%{transform:translateX(100%)}}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.card-head svg{width:52px;height:auto;flex:none}
+.card-head b{font-family:var(--brand);letter-spacing:.14em;font-size:15px;display:block}
+.card-head span{font-size:12.5px;color:var(--muted)}
+.stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative}
+.stamp{aspect-ratio:1;border-radius:50%;border:1.5px dashed rgba(233,185,63,.5);background:rgba(0,0,0,.25);display:grid;place-items:center;cursor:pointer;padding:0;color:var(--muted);font:700 15px var(--sans);transition:transform .15s}
+.stamp:active{transform:scale(.92)}
+.stamp svg{width:64%;height:auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,.6))}
+.stamp.on{border:1.5px solid var(--gold2);background:radial-gradient(circle at 35% 30%,#3a2a0c,#170f05)}
+.free{margin-top:14px;padding:16px;border-radius:16px;text-align:center;border:1.5px dashed rgba(233,185,63,.5);font-family:var(--serif);font-size:26px;font-weight:700;color:var(--muted);transition:all .3s}
+.free.on{border-style:solid;color:#2a1a02;background:linear-gradient(180deg,#fff0a8,#e9b93f 60%,#b47c14);box-shadow:0 0 34px rgba(233,185,63,.5)}
+.card-note{text-align:center;color:var(--muted);font-size:14px;margin:14px 0 0;min-height:22px}
+.card-cta{max-width:640px;margin:18px auto 0;text-align:center}
+
+/* reviews */
+.rev{display:grid;gap:16px}
+@media(min-width:760px){.rev{grid-template-columns:repeat(2,1fr);max-width:820px;margin:0 auto}}
+.r-card{padding:22px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,#5a0f20,#2a0610)}
+.stars{color:var(--gold2);letter-spacing:3px;font-size:16px}
+.r-card p{margin:10px 0 16px;font-family:var(--serif);font-size:21px;line-height:1.25}
+.who{display:flex;align-items:center;gap:12px;font-size:14px}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#2a1a02;background:linear-gradient(180deg,#fff0a8,#c8921e)}
+.who small{display:block;color:var(--muted)}
+
+/* final + footer */
+.final{margin-top:60px;text-align:center;padding:44px 20px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(70% 90% at 50% 0%,rgba(233,185,63,.2),transparent 70%),linear-gradient(180deg,#5a0f20,#2a0610)}
+.final .crown-mini{width:80px;margin:0 auto 8px;display:block;filter:drop-shadow(0 6px 14px rgba(233,185,63,.4))}
+.final h2{margin-bottom:8px}
+footer{padding:34px 18px 20px;text-align:center;color:var(--muted);font-size:13.5px}
+footer b{font-family:var(--brand);letter-spacing:.16em;color:var(--gold1);display:block;margin-bottom:6px}
+
+/* dock + toast */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:22px 14px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,transparent,rgba(21,3,10,.95) 40%);display:flex;justify-content:center;pointer-events:none}
+.dock .btn{pointer-events:auto;width:min(520px,100%);padding:17px 22px;font-size:17px}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:19;transform:translate(-50%,16px);opacity:0;transition:opacity .4s,transform .4s;width:min(360px,calc(100% - 28px));display:flex;gap:12px;align-items:center;padding:11px 14px;border-radius:16px;background:rgba(52,11,22,.97);border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.6);font-size:13.5px;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast small{display:block;color:var(--muted)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .spark{opacity:1}
+  html{scroll-behavior:auto}
+}
+
+/* ===== ROYAL UPGRADE: more red, more gold ===== */
+:root:not([data-theme="light"]), :root[data-theme="dark"], :root{ --bg:#180309; --gold1:#fff3b8; --gold2:#f0c14b; --line:rgba(240,193,75,.38); }
+.bg{background:
+  radial-gradient(80% 45% at 50% 0%, rgba(240,193,75,.26), transparent 70%),
+  radial-gradient(60% 40% at 100% 30%, rgba(214,26,58,.5), transparent 70%),
+  radial-gradient(60% 40% at 0% 62%, rgba(214,26,58,.42), transparent 70%),
+  radial-gradient(70% 40% at 50% 100%, rgba(160,16,36,.5), transparent 70%),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 2L62 32L32 62L2 32Z' fill='none' stroke='%23f0c14b' stroke-opacity='.10'/%3E%3Cpath d='M32 14L50 32L32 50L14 32Z' fill='none' stroke='%23f0c14b' stroke-opacity='.05'/%3E%3Ccircle cx='32' cy='32' r='1.8' fill='%23f0c14b' fill-opacity='.16'/%3E%3C/svg%3E"), #180309}
+.ticker{background:linear-gradient(180deg,#b3132b,#5e0a19);color:var(--gold1);border-top:1px solid var(--gold2);border-bottom:1px solid var(--gold2);font-weight:700;letter-spacing:.02em}
+.ticker i{color:var(--gold2);opacity:1}
+.nav{background:rgba(70,7,18,.92);border-bottom:2px solid var(--gold2);box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#b3132b 0%,#7d0c1f 42%,rgba(84,8,21,.5) 76%,transparent)}
+.hero>.wrap{position:relative;z-index:2}
+.hero::before,.hero::after{content:"";position:absolute;top:0;bottom:0;width:min(15vw,170px);pointer-events:none;z-index:1;opacity:.9;
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.30) 0 6px,rgba(255,255,255,.05) 6px 12px,transparent 12px 22px),linear-gradient(90deg,#96101f,rgba(150,16,31,0))}
+.hero::before{left:0}.hero::after{right:0;transform:scaleX(-1)}
+.crown-wrap::before{content:"";position:absolute;left:50%;top:44%;width:560px;height:560px;transform:translate(-50%,-50%);pointer-events:none;z-index:-1;
+  background:repeating-conic-gradient(from 0deg,rgba(255,226,120,.20) 0 5deg,transparent 5deg 15deg);
+  -webkit-mask:radial-gradient(circle,#000 0,transparent 66%);mask:radial-gradient(circle,#000 0,transparent 66%);animation:spin 90s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.crown{filter:drop-shadow(0 10px 30px rgba(240,193,75,.6)) drop-shadow(0 2px 3px rgba(0,0,0,.75))}
+h1 .r{letter-spacing:.07em;filter:drop-shadow(0 3px 0 rgba(80,45,0,.6))}
+.gold-text{background-image:linear-gradient(100deg,#7a4d08 0%,#e9b93f 20%,#fff8cf 38%,#f0c14b 55%,#a8720f 78%,#f7d56a 100%)}
+h2{position:relative;padding-bottom:6px}
+h2::after{content:"";display:block;height:16px;margin:12px auto 0;width:230px;
+  background:linear-gradient(90deg,transparent,#f0c14b) 0 50%/92px 1px no-repeat,linear-gradient(270deg,transparent,#f0c14b) 100% 50%/92px 1px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0l2.2 5.8L16 8l-5.8 2.2L8 16l-2.2-5.8L0 8l5.8-2.2z' fill='%23f0c14b'/%3E%3C/svg%3E") 50% 50%/15px 15px no-repeat}
+.sub{color:#dccfae}
+.pkg,.basic,.c-card,.r-card,.panel{position:relative}
+.pkg::before,.basic::before,.c-card::before,.r-card::before,.panel::before{content:"";position:absolute;inset:6px;border:1px solid rgba(240,193,75,.3);border-radius:17px;pointer-events:none}
+.pkg,.basic,.c-card,.r-card,.panel,.stats{border-color:rgba(240,193,75,.55)}
+.pkg.hot{background:linear-gradient(180deg,#7a1228,#33081a);border:2px solid #f0c14b;box-shadow:0 0 0 1px rgba(255,240,168,.25),0 26px 70px rgba(240,193,75,.32)}
+.stat{background:linear-gradient(180deg,#5a0f20,#2a0610)}
+.stat b{filter:drop-shadow(0 2px 10px rgba(240,193,75,.35))}
+.btn-gold{background:linear-gradient(180deg,#fff6c2 0%,#f5d061 32%,#d9a21f 62%,#b47c14 100%);border:1px solid #fff0a8;color:#2a1102;box-shadow:0 10px 26px rgba(240,193,75,.32),inset 0 1px 0 rgba(255,255,255,.7)}
+.btn-wa{border:1.5px solid rgba(255,240,168,.9)}
+.btn-ghost{border:1.5px solid var(--gold2);background:rgba(90,8,22,.5)}
+.chip{border:1.5px solid var(--gold2);color:var(--gold1);background:linear-gradient(180deg,#8b1228,#3a0a1a)}
+.chip:hover{background:linear-gradient(180deg,#a3162f,#4a0e20)}
+.perk-bar{border:1.5px dashed var(--gold2);background:rgba(120,12,30,.4);color:var(--gold1)}
+#quiz,#reviews{background:linear-gradient(180deg,transparent,rgba(140,14,34,.32) 20%,rgba(140,14,34,.32) 80%,transparent)}
+.card{border:2px solid var(--gold2);box-shadow:0 26px 70px rgba(240,193,75,.24),inset 0 0 0 5px rgba(90,8,22,.6),inset 0 0 0 6px rgba(240,193,75,.35)}
+.free.on{box-shadow:0 0 44px rgba(240,193,75,.6)}
+.toast{background:linear-gradient(180deg,#6a1024,#2f0712);border:1.5px solid var(--gold2);box-shadow:0 16px 44px rgba(0,0,0,.65),0 0 0 3px rgba(240,193,75,.12)}
+.dock{background:linear-gradient(180deg,transparent,rgba(24,3,9,.95) 42%)}
+footer{margin-top:40px;border-top:2px solid var(--gold2);background:linear-gradient(180deg,rgba(140,14,34,.45),transparent)}
+</style>
+<meta name="theme-color" content="#5a0716">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoWash","name":"Royal Car Care Club","description":"Luxury premium mobile car wash in Cape Town. We come to you.","telephone":"+27681733588","priceRange":"R99.99 - R27 999.99","areaServed":[{"@type":"Place","name":"Bo-Kaap"},{"@type":"Place","name":"Clifton"},{"@type":"Place","name":"Sea Point"},{"@type":"Place","name":"Camps Bay"},{"@type":"Place","name":"Green Point"},{"@type":"Place","name":"Kloof"},{"@type":"Place","name":"Cape Town CBD"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Royal Car Care Club | Luxury Premium Car Wash Cape Town">
+<meta property="og:description" content="We come to you in Bo-Kaap, Clifton, Sea Point, Camps Bay, Green Point, Kloof and the CBD. Wash &amp; Go from R99.99. Join the club on WhatsApp.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<!-- shared SVG art -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3b0"/><stop offset=".25" stop-color="#f4cf5a"/><stop offset=".55" stop-color="#c8921e"/><stop offset=".8" stop-color="#f1c750"/><stop offset="1" stop-color="#8a5a0c"/>
+    </linearGradient>
+    <linearGradient id="gGoldH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a4f0a"/><stop offset=".2" stop-color="#e9b93f"/><stop offset=".5" stop-color="#fff0a8"/><stop offset=".8" stop-color="#e2ad31"/><stop offset="1" stop-color="#6d450a"/>
+    </linearGradient>
+    <linearGradient id="gVelvet" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2152f"/><stop offset="1" stop-color="#4d0513"/></linearGradient>
+    <radialGradient id="gRuby" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffa3b0"/><stop offset=".35" stop-color="#e0193b"/><stop offset="1" stop-color="#5e0016"/></radialGradient>
+    <radialGradient id="gSapph" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#b3ceff"/><stop offset=".4" stop-color="#2458e0"/><stop offset="1" stop-color="#0a1a5e"/></radialGradient>
+    <radialGradient id="gEmer" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#b0f7cd"/><stop offset=".4" stop-color="#11a35a"/><stop offset="1" stop-color="#04442a"/></radialGradient>
+    <radialGradient id="gPearl" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#efe9da"/><stop offset="1" stop-color="#9c9280"/></radialGradient>
+    <symbol id="crown" viewBox="0 0 200 140">
+      <path d="M40 104C32 22 168 22 160 104Z" fill="url(#gVelvet)"/>
+      <path d="M58 96C56 52 74 44 82 50" fill="none" stroke="#ff7b8f" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+      <path d="M30 114 L20 56 L44 84 L62 40 L82 80 L100 26 L118 80 L138 40 L156 84 L180 56 L170 114 Q100 124 30 114Z" fill="url(#gGold)" stroke="#7a4f0a" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M30 114 L20 56 L44 84 L62 40 L82 80 L100 26 L118 80 L138 40 L156 84 L180 56 L170 114 Q100 124 30 114Z" fill="url(#gGoldH)" opacity=".5"/>
+      <path d="M100 26 L118 80 L100 112 L82 80Z" fill="#fff" opacity=".2"/>
+      <path d="M20 56 L44 84 L36 112Z" fill="#000" opacity=".16"/><path d="M180 56 L156 84 L164 112Z" fill="#000" opacity=".16"/>
+      <path d="M62 40 L82 80 L70 112 L52 100Z" fill="#000" opacity=".1"/><path d="M138 40 L118 80 L130 112 L148 100Z" fill="#000" opacity=".1"/>
+      <path d="M22 60 L44 87 L62 44 L82 83 L100 30" fill="none" stroke="#fff8d0" stroke-width="1.3" opacity=".65" stroke-linejoin="round"/>
+      <path d="M100 54 L108 66 L100 80 L92 66Z" fill="url(#gRuby)" stroke="#f6d365" stroke-width="1.4"/>
+      <path d="M97 60 L100 58 L101 64Z" fill="#fff" opacity=".7"/>
+      <path d="M29 104 Q100 114 171 104 L172 126 Q100 136 28 126Z" fill="url(#gGoldH)" stroke="#6d450a" stroke-width="1.2"/>
+      <path d="M29 105.5 Q100 115.5 171 105.5" stroke="#fff6c0" stroke-width="1.4" fill="none" opacity=".85"/>
+      <path d="M28 125 Q100 135 172 125" stroke="#5a3606" stroke-width="1.2" fill="none" opacity=".6"/>
+      <ellipse cx="100" cy="120" rx="9.5" ry="8" fill="url(#gRuby)" stroke="#f6d365" stroke-width="1.7"/><ellipse cx="97" cy="117" rx="2.8" ry="1.9" fill="#fff" opacity=".75"/>
+      <ellipse cx="66" cy="119.5" rx="6.5" ry="5.6" fill="url(#gSapph)" stroke="#f6d365" stroke-width="1.5"/><ellipse cx="64.4" cy="117.6" rx="1.9" ry="1.3" fill="#fff" opacity=".7"/>
+      <ellipse cx="134" cy="119.5" rx="6.5" ry="5.6" fill="url(#gSapph)" stroke="#f6d365" stroke-width="1.5"/><ellipse cx="132.4" cy="117.6" rx="1.9" ry="1.3" fill="#fff" opacity=".7"/>
+      <ellipse cx="38" cy="116.5" rx="4.6" ry="4.2" fill="url(#gEmer)" stroke="#f6d365" stroke-width="1.3"/>
+      <ellipse cx="162" cy="116.5" rx="4.6" ry="4.2" fill="url(#gEmer)" stroke="#f6d365" stroke-width="1.3"/>
+      <g stroke="#b98a1f" stroke-width=".7">
+        <circle cx="20" cy="52" r="5.6" fill="url(#gPearl)"/><circle cx="62" cy="35" r="5.6" fill="url(#gPearl)"/>
+        <circle cx="100" cy="19" r="7.4" fill="url(#gPearl)"/>
+        <circle cx="138" cy="35" r="5.6" fill="url(#gPearl)"/><circle cx="180" cy="52" r="5.6" fill="url(#gPearl)"/>
+      </g>
+      <g fill="#fff" opacity=".85"><circle cx="18" cy="50" r="1.4"/><circle cx="60" cy="33" r="1.4"/><circle cx="97.6" cy="16.6" r="1.9"/><circle cx="136" cy="33" r="1.4"/><circle cx="178" cy="50" r="1.4"/></g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="ticker" aria-label="Club highlights">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<div class="nav"><div class="nav-in">
+  <a class="logo" href="#top"><svg viewBox="0 0 200 140" aria-hidden="true"><use href="#crown"/></svg><span>ROYAL CAR CARE CLUB</span></a>
+  <nav aria-label="Main"><a href="#packages">Packages</a><a href="#areas">Areas</a><a href="#quiz">Find your plan</a><a href="#loyalty">Rewards</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+  <a class="btn btn-wa" data-wa="Hi Royal Car Care Club! I'd like to join the club." href="#">Join the Club</a>
+</div></div>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="crown-wrap">
+      <svg class="crown" viewBox="0 0 200 140" role="img" aria-label="Gold royal crown"><use href="#crown"/></svg>
+      <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span><span class="spark s4"></span>
+    </div>
+    <h1 class="gold-text"><span class="r">Royal</span><span class="c">Car Care Club</span></h1>
+    <div class="rule" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="currentColor"/></svg>
+    </div>
+    <p class="tag">A luxury premium car wash that comes to you.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa pulse" data-wa="Hi Royal Car Care Club! I'd like to join the club." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Join the Club
+      </a>
+      <a class="btn btn-ghost" href="#quiz">Find my wash type</a>
+    </div>
+    <div class="live">Join 27 members across Cape Town</div>
+
+    <div class="stats" id="stats">
+      <div class="stat"><b class="gold-text" data-to="11">0</b><span>Washes delivered</span></div>
+      <div class="stat"><b class="gold-text" data-to="27">0</b><span>Active members</span></div>
+      <div class="stat"><b class="gold-text" data-to="4.1" data-dec="1">0</b><span>Average rating</span></div>
+      <div class="stat"><b class="gold-text" data-to="7">0</b><span>Areas we come to you</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="packages">
+    <div class="wrap">
+      <h2 class="gold-text">Choose your crown</h2>
+      <p class="sub">Pay once for a quick shine, or join the club for regular royal washes at your door. All prices in South African rand.</p>
+
+      <div class="basic" id="basic"></div>
+
+      <div class="pkgs" id="pkgs"></div>
+
+      <div class="perk-bar">Every 10 washes, your 11th is on the house.</div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <h2 class="gold-text">We come to you</h2>
+      <p class="sub">Luxury car care at your home, office or parking bay. Tap your area to book on WhatsApp.</p>
+      <div class="areas" id="areaChips"></div>
+      <p class="sub" style="margin:22px auto 0;font-size:14px">Not on the list? Message us and we'll let you know if we can reach you.</p>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="wrap">
+      <h2 class="gold-text">What type of car wash person are you?</h2>
+      <p class="sub">Four quick taps. We'll match you to the perfect plan.</p>
+      <div class="panel" id="quizPanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="loyalty">
+    <div class="wrap">
+      <h2 class="gold-text">Wash 10, the 11th is free</h2>
+      <p class="sub">Every visit earns a royal stamp. Tap the card to try it.</p>
+      <div class="card">
+        <div class="card-head">
+          <svg viewBox="0 0 200 140" aria-hidden="true"><use href="#crown"/></svg>
+          <div><b>ROYAL CAR CARE CLUB</b><span>Member loyalty card</span></div>
+        </div>
+        <div class="stamps" id="stamps"></div>
+        <div class="free" id="freeBar">Wash #11 is FREE</div>
+        <p class="card-note" id="cardNote"></p>
+      </div>
+      <div class="card-cta">
+        <a class="btn btn-gold" data-wa="Hi Royal Car Care Club! Please start my loyalty card (10 washes = 1 free)." href="#">Start my card</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <h2 class="gold-text">Loved by drivers</h2>
+      <p class="sub">Rated 4.1 by our members.</p>
+      <div class="rev">
+        <div class="r-card"><div class="stars">★★★★★</div><p>They come straight to my driveway in Camps Bay and the car looks showroom-new every time.</p><div class="who"><div class="av">T</div><div>Thabo M.<small>Annual Premium member, Camps Bay</small></div></div></div>
+        <div class="r-card"><div class="stars">★★★★☆</div><p>So convenient. I booked on WhatsApp and my car was spotless by lunchtime.</p><div class="who"><div class="av">N</div><div>Naledi D.<small>Monthly member, Sea Point</small></div></div></div>
+        
+      </div>
+
+      <div class="final">
+        <svg class="crown-mini" viewBox="0 0 200 140" aria-hidden="true"><use href="#crown"/></svg>
+        <h2 class="gold-text">Your crown is waiting</h2>
+        <p class="sub" style="margin-bottom:22px">Message us on WhatsApp and you'll be in the club in under a minute.</p>
+        <a class="btn btn-wa" data-wa="Hi Royal Car Care Club! I'd like to join the club." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:22px;height:22px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Join the Club
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="gold-text">Book or ask us anything</h2>
+    <p class="sub">Message us on WhatsApp to book a wash or join the club. We reply within minutes.</p>
+    <div class="contact-grid">
+      <div class="c-card">
+        <h3>WhatsApp</h3>
+        <p class="big">+27 68 173 3588</p>
+        <p>Bookings open 7 days a week</p>
+        <a class="btn btn-wa" data-wa="Hi Royal Car Care Club! I have a question." href="#">Chat on WhatsApp</a>
+      </div>
+      <div class="c-card">
+        <h3>Share our page</h3>
+        <div class="linkbox" id="linkText"></div>
+        <div class="cta-row" style="margin-top:0">
+          <button class="btn btn-gold" id="copyBtn" type="button">Copy link</button>
+          <a class="btn btn-ghost" id="shareWA" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>ROYAL CAR CARE CLUB</b>
+  Luxury premium mobile car wash, Cape Town<br>
+  WhatsApp +27 68 173 3588<br>
+  &copy; 2026 Royal Car Care Club. All rights reserved.
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><div class="av" id="toastAv">M</div><div><span id="toastTxt"></span><small id="toastTime"></small></div></div>
+
+<div class="dock">
+  <a class="btn btn-wa" data-wa="Hi Royal Car Care Club! I'd like to join the club." href="#" aria-label="Join the Club on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:24px;height:24px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Join the Club
+  </a>
+</div>
+
+<script>
+/* ====== EDIT THESE ====== */
+var WA_NUMBER = "27681733588";   // +27 68 173 3588
+var PAGE_URL = (location.protocol.indexOf("http") === 0) ? (location.origin + location.pathname) : "https://claude.ai/artifact/Tf2snJPoDr2BeqQXaavGHW";
+var CUR = "R";                   // South African rand
+var PACKAGES = [
+  { key:"d", name:"Daily",   price:149.99,   per:"/ day",   who:"One full Royal wash, today, at your door",
+    feats:["1 full Royal wash, we come to you","Foam bath, hand dry and tire shine","Interior vacuum included","Counts toward your free wash"] },
+  { key:"w", name:"Weekly",  price:499.99,   per:"/ week",  who:"Seven days of premium care",
+    feats:["Up to 3 Royal washes in the week","Hot wax and tire shine","Interior vacuum and wipe-down","Priority booking"] },
+  { key:"m", name:"Monthly", price:2999.99,  per:"/ month", who:"Regular luxury care, one simple price", hot:"Most popular",
+    feats:["12 Royal washes a month","Ceramic shield top-up every month","Full interior clean each month","Priority booking","Bring a friend: 50% off"] },
+  { key:"a", name:"Annual Premium", price:27999.99, per:"/ year", who:"The full crown, with extra benefits", hot:"Best value", save:"Pay 12 months, get 2 months free",
+    feats:["14 months of membership for the price of 12","Everything in Monthly, plus more","2 full interior and exterior details","VIP priority scheduling and member gift box","Price locked for the whole term"] }
+];
+var BASIC = { name:"Wash & Go Basic", price:99.99,
+  feats:["Exterior foam wash and rinse","Hand-dried finish","We come to you","No membership needed","Counts toward your free wash"] };
+var TICKER = ["Luxury premium car wash","We come to you across Cape Town","Wash &amp; Go from only R99.99","Bo-Kaap, Clifton, Sea Point, Camps Bay, Green Point, Kloof and the CBD","Rated 4.1 by our members","Every 11th wash is free"];
+var TOASTS = [
+  ["Thabo M.","Camps Bay","Annual Premium"],["Naledi D.","Sea Point","Monthly"],["Pieter v.d.M.","Green Point","Weekly"],["Ayanda Z.","Clifton","Annual Premium"],
+  ["Lerato K.","Bo-Kaap","Monthly"],["Johan B.","Kloof","Weekly"],["Zanele P.","Cape Town CBD","Monthly"],["Sipho N.","Clifton","Annual Premium"],
+  ["Fatima P.","Bo-Kaap","Weekly"],["Ruan V.","Sea Point","Monthly"]
+];
+var AREAS = ["Bo-Kaap","Clifton","Sea Point","Camps Bay","Green Point","Kloof","Cape Town CBD"];
+/* ======================== */
+
+function wa(t){ return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(t); }
+function bindWA(root){
+  (root||document).querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = wa(a.getAttribute("data-wa")); a.target = "_blank"; a.rel = "noopener";
+  });
+}
+var WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>';
+function priceParts(n){ var s = n.toFixed(2).split("."); return [s[0].replace(/\B(?=(\d{3})+(?!\d))/g," "), s[1]]; }
+function num(n){ var a = priceParts(n); return a[0] + "." + a[1]; }
+function priceHTML(n){ var a = priceParts(n); return a[0] + '<span class="cents">.' + a[1] + '</span>'; }
+function money(n){ return CUR + num(n); }
+
+/* ticker */
+(function(){
+  var one = TICKER.map(function(t){ return "<span>"+t+"</span><i>&#9670;</i>"; }).join("");
+  document.getElementById("tickerTrack").innerHTML = one + one + one + one;
+})();
+
+/* areas */
+(function(){
+  document.getElementById("areaChips").innerHTML = AREAS.map(function(a){
+    return '<a class="chip" data-wa="Hi Royal Car Care Club! Please book a wash for me in '+a+'." href="#">'+a+'</a>';
+  }).join("");
+})();
+
+/* wash & go basic */
+(function(){
+  var b = BASIC;
+  document.getElementById("basic").innerHTML =
+    '<div><span class="badge">No membership needed</span><h3>'+b.name+'</h3><ul>'+
+    b.feats.map(function(f){return '<li class="ck">'+f+'</li>';}).join("")+'</ul></div>'+
+    '<div class="buy"><div class="price gold-text"><span class="cur">'+CUR+'</span><span class="amt">'+priceHTML(b.price)+'</span><small>/ wash</small></div>'+
+    '<a class="btn btn-wa" data-wa="Hi Royal Car Care Club! I\'d like a Wash &amp; Go Basic ('+money(b.price)+')." href="#">'+WA_ICON+'Wash &amp; Go</a></div>';
+})();
+
+/* packages */
+(function(){
+  document.getElementById("pkgs").innerHTML = PACKAGES.map(function(p){
+    return '<article class="pkg'+(p.hot?' hot':'')+'">'+
+      (p.hot?'<span class="ribbon">'+p.hot+'</span>':'')+
+      '<h3>'+p.name+'</h3><p class="for">'+p.who+'</p>'+
+      '<div class="price"><span class="cur">'+CUR+'</span><span class="amt gold-text">'+priceHTML(p.price)+'</span><small>'+p.per+'</small></div>'+
+      (p.save?'<span class="save">'+p.save+'</span>':'')+
+      '<ul>'+p.feats.map(function(f){return '<li class="ck">'+f+'</li>';}).join("")+'</ul>'+
+      '<a class="btn '+(p.hot?'btn-wa':'btn-gold')+' btn-block" data-wa="Hi Royal Car Care Club! I want to join the '+p.name+' plan ('+money(p.price)+' '+p.per+')." href="#">'+WA_ICON+'Join the Club</a>'+
+    '</article>';
+  }).join("");
+})();
+
+/* quiz */
+var TYPES = {
+  b:{ name:"The Wash & Go Casual", txt:"You like it quick and simple. A clean car, no commitment, back on the road in minutes.", reco:"Wash & Go Basic", msg:"Wash & Go Basic" },
+  d:{ name:"The Daily Driver", txt:"Your car works as hard as you do. You want it fresh whenever you need it, with no long-term strings.", reco:"Daily plan", msg:"Daily plan" },
+  w:{ name:"The Weekend Warrior", txt:"You save your best for the weekend and want a car that looks the part all week long.", reco:"Weekly plan", msg:"Weekly plan" },
+  m:{ name:"The Showroom Perfectionist", txt:"Gloss matters to you. Regular hot-wax washes keep your finish flawless all month.", reco:"Monthly plan", msg:"Monthly plan" },
+  a:{ name:"The Royal Collector", txt:"Your car is a statement piece. You get the full crown: a full interior detail, priority booking and the best price for the year.", reco:"Annual Premium plan", msg:"Annual Premium plan" }
+};
+var ORDER = ["a","m","w","d","b"];
+var QUIZ = [
+  { q:"How does your car get used?", o:[["Daily commute, non-stop","d"],["Weekend cruises and errands","w"],["Occasional trips, mostly parked","b"],["It's my showpiece","a"]] },
+  { q:"When it gets dirty, you…", o:[["Wash it the same day","d"],["Wait for the weekend","w"],["Wait until it's really bad","b"],["Fix it right away, spotless every time","m"]] },
+  { q:"Your ideal finish is…", o:[["Quick in and out, no fuss","b"],["Shiny outside, fresh inside","w"],["Ceramic gloss that turns heads","m"],["The full royal treatment with detailing","a"]] },
+  { q:"How do you like to pay?", o:[["Pay as I go","b"],["Day by day, stay flexible","d"],["One simple monthly price","m"],["Lock in the best rate for the year","a"]] }
+];
+var qi = 0, score = {};
+function renderQuiz(){
+  var p = document.getElementById("quizPanel");
+  if(qi < QUIZ.length){
+    var q = QUIZ[qi];
+    p.innerHTML = '<div class="dots">'+QUIZ.map(function(_,i){return '<i class="'+(i<=qi?'on':'')+'"></i>';}).join("")+'</div>'+
+      '<h3 class="q">'+q.q+'</h3><div class="opts">'+
+      q.o.map(function(o,i){return '<button class="opt" data-k="'+o[1]+'">'+o[0]+'</button>';}).join("")+'</div>';
+    p.querySelectorAll(".opt").forEach(function(b){
+      b.addEventListener("click", function(){ var k=b.getAttribute("data-k"); score[k]=(score[k]||0)+1; qi++; renderQuiz(); });
+    });
+  } else {
+    var best = ORDER.reduce(function(a,k){ return (score[k]||0) > (score[a]||0) ? k : a; }, ORDER[0]);
+    var t = TYPES[best];
+    p.innerHTML = '<div class="result"><svg viewBox="0 0 200 140" aria-hidden="true"><use href="#crown"/></svg>'+
+      '<h3 class="gold-text">'+t.name+'</h3><p>'+t.txt+'</p>'+
+      '<div class="reco">Your match: '+t.reco+'</div>'+
+      '<div class="cta-row"><a class="btn btn-wa" data-wa="Hi Royal Car Care Club! I took the quiz and I\'m '+t.name+'. I want the '+t.msg+'." href="#">'+WA_ICON+'Join the Club</a>'+
+      '<button class="btn btn-ghost" id="retake">Retake quiz</button></div></div>';
+    bindWA(p);
+    document.getElementById("retake").addEventListener("click", function(){ qi=0; score={}; renderQuiz(); });
+  }
+}
+renderQuiz();
+
+/* loyalty card */
+var stampCount = 7;
+function renderStamps(){
+  var wrap = document.getElementById("stamps"); wrap.innerHTML = "";
+  for(var i=0;i<10;i++){
+    var b = document.createElement("button");
+    b.className = "stamp" + (i < stampCount ? " on" : "");
+    b.setAttribute("aria-label","Wash "+(i+1));
+    b.innerHTML = i < stampCount ? '<svg viewBox="0 0 200 140" aria-hidden="true"><use href="#crown"/></svg>' : (i+1);
+    (function(idx){ b.addEventListener("click", function(){ stampCount = (stampCount === idx+1) ? idx : idx+1; renderStamps(); }); })(i);
+    wrap.appendChild(b);
+  }
+  var full = stampCount >= 10;
+  document.getElementById("freeBar").className = "free" + (full ? " on" : "");
+  document.getElementById("freeBar").textContent = full ? "Your next wash is FREE" : "Wash #11 is FREE";
+  document.getElementById("cardNote").textContent = full ? "You've earned it. Show this card at the lane." :
+    stampCount + " of 10 stamped. " + (10 - stampCount) + " more to unlock your free wash.";
+}
+renderStamps();
+
+/* animated counters */
+(function(){
+  var els = document.querySelectorAll("[data-to]");
+  function fmt(el, v){
+    var dec = +el.getAttribute("data-dec") || 0;
+    el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString("en-US")) + (el.getAttribute("data-suffix") || "");
+  }
+  function run(el){
+    var to = +el.getAttribute("data-to"), t0 = null, d = 1800;
+    function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0)/d, 1); p = 1 - Math.pow(1-p, 3); fmt(el, to*p); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce || !("IntersectionObserver" in window)){ els.forEach(function(e){ fmt(e, +e.getAttribute("data-to")); }); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } }); }, {threshold:.4});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* live join notifications: one pop-up every 5 to 7 minutes, random time labels (minutes, hours, days, weeks, months) */
+(function(){
+  var t = document.getElementById("toast");
+  var UNITS = [["min","mins",2,55],["hour","hours",1,20],["day","days",1,6],["week","weeks",1,3],["month","months",1,8]];
+  var lastU = -1, lastP = -1;
+  function rnd(n){ return Math.floor(Math.random()*n); }
+  function ago(){
+    var k; do { k = rnd(UNITS.length); } while(k === lastU); lastU = k;
+    var u = UNITS[k], n = u[2] + rnd(u[3]-u[2]+1);
+    return n + " " + (n === 1 ? u[0] : u[1]) + " ago";
+  }
+  function person(){
+    var k; do { k = rnd(TOASTS.length); } while(k === lastP && TOASTS.length > 1); lastP = k; return TOASTS[k];
+  }
+  function show(){
+    var d = person();
+    document.getElementById("toastAv").textContent = d[0].charAt(0);
+    document.getElementById("toastTxt").innerHTML = "<b>"+d[0]+"</b> from "+d[1]+" joined the <b>"+d[2]+"</b> plan";
+    document.getElementById("toastTime").textContent = ago();
+    t.classList.add("show");
+    setTimeout(function(){ t.classList.remove("show"); }, 6500);
+  }
+  function schedule(){
+    var ms = (300 + rnd(121)) * 1000;   // 5 to 7 minutes, every time
+    setTimeout(function(){ show(); schedule(); }, ms);
+  }
+  schedule();
+})();
+
+/* share link */
+(function(){
+  document.getElementById("linkText").innerHTML = '<a href="'+PAGE_URL+'" target="_blank" rel="noopener" style="color:inherit">'+PAGE_URL+'</a>';
+  document.getElementById("shareWA").href = "https://wa.me/?text=" + encodeURIComponent("Royal Car Care Club, luxury premium car wash: " + PAGE_URL);
+  var btn = document.getElementById("copyBtn");
+  btn.addEventListener("click", function(){
+    function done(){ btn.textContent = "Link copied"; setTimeout(function(){ btn.textContent = "Copy link"; }, 2000); }
+    function fallback(){
+      try{ var ta=document.createElement("textarea"); ta.value=PAGE_URL; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta); done(); }
+      catch(e){ btn.textContent = "Press and hold the link"; }
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(PAGE_URL).then(done, fallback); } else { fallback(); }
+  });
+})();
+
+bindWA();
+</script>
+</body>
+</html>
